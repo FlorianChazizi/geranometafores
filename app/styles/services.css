@@ -53,3 +53,22 @@
     font-size: 2rem;
   }
 }
+.show-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.show-more-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  background-color: #e63946;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #c72c3b;
+}

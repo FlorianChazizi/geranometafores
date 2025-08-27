@@ -1,12 +1,16 @@
 "use client";
-import { useEffect } from "react";
-import '../styles/services.css';
+
+import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "../styles/services.css";
+
 export default function Services() {
-      useEffect(() => {
-        Aos.init({ duration: 1000, once: true }); // 1000ms animation, play once
-      }, []);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
   const services = [
     "Ανεγέρσεις πυλώνων",
@@ -21,17 +25,32 @@ export default function Services() {
     "Μεταφορές και ανυψώσεις σιδηροκατασκευών",
   ];
 
+  // Decide how many to show initially
+  const initialCount = 5;
+  const displayedServices = showAll ? services : services.slice(0, initialCount);
+
   return (
     <section id="services" className="services-section">
       <h2>Οι Υπηρεσίες μας</h2>
       <div className="services-grid">
-        {services.map((service, index) => (
+        {displayedServices.map((service, index) => (
           <div key={index} className="service-card" data-aos="zoom-in">
-            <span className="service-icon" >✔</span>
+            <span className="service-icon">✔</span>
             <p>{service}</p>
           </div>
         ))}
       </div>
+
+      {services.length > initialCount && (
+        <div className="show-more-container">
+          <button
+            className="show-more-btn"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Δείτε λιγότερα" : "Δείτε όλες τις υπηρεσίες"}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

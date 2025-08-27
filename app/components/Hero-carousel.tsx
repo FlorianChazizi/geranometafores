@@ -9,7 +9,9 @@ import Banner2 from '../../public/assets/banner2.jpg';
 import Banner3 from '../../public/assets/banner3.jpg';
 // CSS import
 import '../styles/hero-carousel.css';
-
+// animation import
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 const slides = [
@@ -35,6 +37,9 @@ const slides = [
 
 export default function HeroCarousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    useEffect(() => {
+        Aos.init({ duration: 1000, once: true }); // 1000ms animation, play once
+    }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -68,9 +73,9 @@ export default function HeroCarousel() {
                             fill
                             priority={index == 0}    // only first slide eager load
                         />                        <div className="carousel-text">
-                            <h1>{slide.title}</h1>
-                            <p>{slide.subtitle}</p>
-                            <div className="carousel-buttons">
+                            <h1 data-aos="fade-down">{slide.title}</h1>
+                            <p data-aos="fade-up">{slide.subtitle}</p>
+                            <div className="carousel-buttons" data-aos="fade-up">
                                 <a href="tel:+306948379057" className="banner-btn">
                                     {slide.cta}
                                 </a>

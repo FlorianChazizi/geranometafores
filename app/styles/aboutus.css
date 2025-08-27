@@ -8,9 +8,7 @@
 .about-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--accent-color);
-  position: relative;
-  display: inline-block;
+  color: #e63946;
 }
 
 .about-content {
@@ -18,13 +16,25 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .about-content p {
   font-size: 1.2rem;
   line-height: 1.8;
   text-align: justify;
+}
+
+/* Image styling */
+.about-image {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.rounded-image {
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 /* Responsive */
@@ -35,5 +45,10 @@
 
   .about-content p {
     font-size: 1rem;
+  }
+
+  .rounded-image {
+    width: 90%;
+    height: auto;
   }
 }
