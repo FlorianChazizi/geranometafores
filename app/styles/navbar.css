@@ -170,7 +170,7 @@
 @media (max-width: 768px) {
 
   .navigation-bar{
-      background-color: transparent;   /* transparent at top */
+  background-color: var(--black-primary);    /* transparent at top */
   backdrop-filter: none;           /* no blur at top */
   -webkit-backdrop-filter: none; 
     height: 85px;
@@ -179,8 +179,8 @@
     height: 85px;
   }
   .logo-img{
-    height: 100px;
-    width: 100px; 
+    height: 80px;
+    width: 90px; 
   }
 
   .navbar-links {
@@ -190,11 +190,15 @@
   .navbar-toggle {
     display: block;
     z-index: 100;
+    height: 80px;
   }
 
   .navigation-bar.is-open .mobile-menu {
     display: flex;
       backdrop-filter: blur(10px);                /* blur the background behind */
   -webkit-backdrop-filter: blur(10px); 
+  }
+  .mobile-menu a {
+    color:  var(--accent-color);
   }
 }

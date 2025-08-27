@@ -52,7 +52,7 @@ export default function Navbar() {
           <Link href="/gallery" className="navlinks" aria-label="Σελίδα φωτογραφιών">
             Gallery
           </Link>
-          <Link href="/#radevou" className="navlinks contact" aria-label="Σελίδα ραντεβού">
+          <Link href="/#radevou" className="navlinks" aria-label="Σελίδα ραντεβού">
             Κλείσε Ραντεβού
           </Link>
         </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/#radevou"
-            className="navlinks contact"
+            className="navlinks"
             onClick={() => setIsOpen(false)}
             aria-label="Σελίδα ραντεβού"
           >

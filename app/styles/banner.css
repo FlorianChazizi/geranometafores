@@ -1,0 +1,59 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* adjust depending on how big you want the hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background image */
+.banner-image {
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark overlay for text readability */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark transparent layer */
+  z-index: 2;
+}
+
+/* Text content */
+.banner-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.banner-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.banner-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.banner-btn {
+  display: inline-block;
+  background: #e63946; /* red accent */
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.banner-btn:hover {
+  background: #c72c3b; /* darker red */
+}
