@@ -8,7 +8,7 @@
 .contact-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #fff; /* white heading */
+  color: var(--accent-color);
 }
 
 .contact-container {
@@ -37,7 +37,7 @@
   color: #ddd; /* softer gray */
 }
 
-.contact-item a {
+.contact-item a, span {
   text-decoration: none;
   color: #e63946; /* red accent */
   font-weight: bold;
