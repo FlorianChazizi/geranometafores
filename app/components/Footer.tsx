@@ -1,47 +1,56 @@
 "use client";
+import { useEffect } from "react";
+
 import "../styles/footer.css";
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
+import "../styles/contact.css";
 export default function Footer() {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Quick Links */}
-        <div className="footer-column">
-          <h3>Γρήγοροι Σύνδεσμοι</h3>
-          <ul>
-            <li><a href="#home">Αρχική</a></li>
-            <li><a href="#about">Σχετικά με εμάς</a></li>
-            <li><a href="#services">Υπηρεσίες</a></li>
-            <li><a href="#contact">Επικοινωνία</a></li>
-          </ul>
-        </div>
+    useEffect(() => {
+        Aos.init({ duration: 1000, once: true });
+    }, []);
 
-        {/* Business Info */}
-        <div className="footer-column">
-          <h3>Επικοινωνία</h3>
-          <p><Phone size={16}/> +30 6948 379057</p>
-          <p><Mail size={16}/> info@gecranes.gr</p>
-          <p><MapPin size={16}/> Λάρισα, Ελλάδα</p>
-        </div>
+    return (
+        <footer className="footer">
+            <div className="footer-container">
+                {/* Quick Links */}
+                <div className="footer-column">
+                    <h3>Γρήγοροι Σύνδεσμοι</h3>
+                    <ul>
+                        <li data-aos="fade-up"><a href="#home"  >Αρχική</a></li>
+                        <li data-aos="fade-right" data-aos-duration="1200"><a href="#about">Σχετικά με εμάς</a></li>
+                        <li data-aos="fade-right" data-aos-duration="1400"><a href="#services" >Υπηρεσίες</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1600"><a href="#contact" >Επικοινωνία</a></li>
+                    </ul>
+                </div>
 
-        {/* Social Media */}
-        <div className="footer-column">
-          <h3>Ακολουθήστε μας</h3>
-          <div className="social-icons">
-            <a href="#"><Facebook /></a>
-            <a href="#"><Instagram /></a>
-          </div>
-        </div>
-      </div>
+                {/* Business Info */}
+                <div className="footer-column">
+                    <h3>Επικοινωνία</h3>
+                    <p data-aos="fade-up"><Phone size={16} /> +30 6948 379057</p>
+                    <p data-aos="fade-right"><Mail size={16} /> info@gecranes.gr</p>
+                    <p data-aos="fade-up"><MapPin size={16} /> Λάρισα, Ελλάδα</p>
+                </div>
 
-      {/* Bottom */}
-      <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Γερανομεταφορές Νίκος. Όλα τα δικαιώματα κατοχυρωμένα.</p>
-        <div className="footer-links">
-          <a href="#">Privacy Policy</a> | <a href="#">Όροι Χρήσης</a> | <a href="#">Sitemap</a>
-        </div>
-      </div>
-    </footer>
-  );
+                {/* Social Media */}
+                <div className="footer-column">
+                    <h3>Ακολουθήστε μας</h3>
+                    <div className="social-icons">
+                        <a href="#"><Facebook /></a>
+                        <a href="#"><Instagram /></a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom */}
+            <div className="footer-bottom">
+                <p>© {new Date().getFullYear()} Γερανομεταφορές Νίκος. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+                <div className="footer-links">
+                    <a href="#">Privacy Policy</a> | <a href="#">Όροι Χρήσης</a> | <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+    );
 }
