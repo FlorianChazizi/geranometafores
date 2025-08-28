@@ -30,7 +30,7 @@ export default function Footer() {
                 <div className="footer-column">
                     <h3>Επικοινωνία</h3>
                     <p data-aos="fade-up"><Phone size={16} /> +30 6948 379057</p>
-                    <p data-aos="fade-right"><Mail size={16} /> info@gecranes.gr</p>
+                    <p data-aos="fade-right"><Mail size={16} /> geranometaforesnikos@gmail.com</p>
                     <p data-aos="fade-up"><MapPin size={16} /> Λάρισα, Ελλάδα</p>
                 </div>
 
