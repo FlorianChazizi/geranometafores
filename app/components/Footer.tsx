@@ -38,8 +38,8 @@ export default function Footer() {
                 <div className="footer-column">
                     <h3>Ακολουθήστε μας</h3>
                     <div className="social-icons">
-                        <a href="#"><Facebook /></a>
-                        <a href="#"><Instagram /></a>
+                        <a href="#"   aria-label='Facebook Γερανομεταφορές Νίκοσ Λάρισα'><Facebook /></a>
+                        <a href="#"  aria-label='Instagram Γερανομεταφορές Νίκοσ Λάρισα'><Instagram /></a>
                     </div>
                 </div>
             </div>

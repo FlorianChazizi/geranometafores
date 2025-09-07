@@ -38,6 +38,7 @@ export default function Contact() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.563046701994!2d22.41912531535068!3d39.639022979460205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a76bd453df1b5d%3A0x400bd2ce2b97490!2sLarisa!5e0!3m2!1sen!2sgr!4v1695900000000!5m2!1sen!2sgr"
             width="100%"
             height="350"
+            title="Λάρισα, Γερανομεταφορές Νίκος"
             style={{ border: 0 }}
             // allowFullScreen=""
             loading="lazy"

@@ -20,8 +20,8 @@ export default function Banner() {
       <div className="banner-content">
         <h1>Γερανομεταφορές Νίκος</h1>
         <p>Μεταφορές, Ανυψώσεις & Ασφάλεια σε κάθε έργο</p>
-        <a href="tel:+3069XXXXXXXX" className="banner-btn">
-          📞 Καλέστε μας τώρα
+        <a href="tel:+306948379057" aria-label="Τηλέφωνο Γερανομεταφορές Λάρισα" className="banner-btn">
+         Καλέστε μας τώρα
         </a>
       </div>
     </section>
